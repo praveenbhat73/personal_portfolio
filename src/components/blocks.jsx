@@ -26,6 +26,7 @@ const ICONS = {
   ),
   moon: <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />,
   arrow: <path d="M5 12h14M12 5l7 7-7 7" />,
+  download: <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />,
   ext: <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />,
   close: <path d="M18 6L6 18M6 6l12 12" />,
   play: <polygon points="6 3 20 12 6 21 6 3" />,
@@ -68,6 +69,21 @@ export function ExternalLink({ href, children }) {
       {children}
       <Icon name="ext" size={14} />
     </a>
+  );
+}
+
+export function ResumeBlock() {
+  return (
+    <div className="resume-card">
+      <div>
+        <h3>Download my resume</h3>
+        <p>View my experience, skills and education.</p>
+      </div>
+      <a className="btn primary" href={ME.links.resume} target="_blank" rel="noopener noreferrer">
+        <Icon name="download" />
+        Download resume
+      </a>
+    </div>
   );
 }
 

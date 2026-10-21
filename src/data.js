@@ -11,6 +11,7 @@ export const ME = {
     linkedin: 'https://www.linkedin.com/in/praveen-bhat-858783203/',
     geeksforgeeks: 'https://auth.geeksforgeeks.org/user/praveen721',
     kaggle: 'https://www.kaggle.com/praveennbhat/code',
+    resume: 'https://drive.google.com/file/d/1w1x4eN0pBpqb5ZRfcght3emsv77sd4iw/view?usp=sharing',
   },
 };
 

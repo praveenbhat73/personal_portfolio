@@ -2,6 +2,7 @@ import { Icon } from './blocks.jsx';
 
 const LINKS = [
   ['About', '#about'],
+  ['Resume', '#resume'],
   ['Journey', '#journey'],
   ['Work', '#impact'],
   ['Stack', '#stack'],

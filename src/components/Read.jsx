@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ME, CASES, JOURNEY } from '../data.js';
 import {
-  Icon, Chips, CaseDetail, SkillsGrid, ProjectCards, AwardsBlock, AboutBlock, ContactBlock, usePrefersReducedMotion,
+  Icon, Chips, CaseDetail, SkillsGrid, ProjectCards, AwardsBlock, AboutBlock, ContactBlock, ResumeBlock, usePrefersReducedMotion,
 } from './blocks.jsx';
 
 function Section({ id, title, lead, children }) {
@@ -227,6 +227,9 @@ export default function Read({ onPlay }) {
   return (
     <main className="read">
       <Hero onPlay={onPlay} />
+      <Section id="resume" title="Resume" lead="My experience, skills and education in one place.">
+        <ResumeBlock />
+      </Section>
       <About />
       <Journey />
       <Impact />

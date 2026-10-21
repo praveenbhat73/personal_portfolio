@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { PipelineGame } from '../game/engine.js';
 import { STATIONS, ME } from '../data.js';
 import {
-  Icon, AboutBlock, CaseList, SkillsGrid, ProjectCards, RecognitionBlock, ContactBlock, usePrefersReducedMotion,
+  Icon, AboutBlock, CaseList, SkillsGrid, ProjectCards, RecognitionBlock, ContactBlock, ResumeBlock, usePrefersReducedMotion,
 } from './blocks.jsx';
 
 const BODY = {
@@ -174,6 +174,10 @@ export default function Game({ onExit }) {
       </div>
 
       <div className="hud-r">
+        <a className="glass-btn resume-game-link" href={ME.links.resume} target="_blank" rel="noopener noreferrer">
+          <Icon name="download" size={16} />
+          Download resume
+        </a>
         <button type="button" className="glass-btn" aria-expanded={drawer} onClick={() => setDrawer(!drawer)}>
           <Icon name="list" size={16} />
           Stations
@@ -226,6 +230,9 @@ export default function Game({ onExit }) {
               </li>
             ))}
           </ul>
+          <div className="drawer-resume">
+            <ResumeBlock />
+          </div>
           <button type="button" className="drawer-skip" onClick={onExit}>
             Read it instead
           </button>

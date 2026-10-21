@@ -130,6 +130,10 @@ h1 { font-size: clamp(2.3rem, 6.6vw, 4.1rem); font-weight: 800; letter-spacing: 
 .hero-meta span { display: inline-flex; gap: 6px; align-items: center; }
 .hero-meta a { color: var(--muted); display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
 .hero-meta a:hover { color: var(--brand); border-color: var(--line-strong); }
+.resume-card { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: var(--shadow); }
+.resume-card h3 { font-size: 1.15rem; }
+.resume-card p { color: var(--muted); margin-top: 5px; }
+@media (max-width: 600px) { .resume-card { align-items: flex-start; flex-direction: column; } }
 .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 22px; box-shadow: var(--shadow); }
 .hero-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.95rem; }
 .hero-card-top span { font: 700 0.72rem var(--mono); color: var(--mint); background: color-mix(in srgb, var(--mint) 14%, transparent); padding: 3px 10px; border-radius: 999px; }
@@ -253,6 +257,8 @@ h1 { font-size: clamp(2.3rem, 6.6vw, 4.1rem); font-weight: 800; letter-spacing: 
   font-weight: 700; font-size: 0.85rem; color: #eef2ff; background: rgba(10, 16, 36, 0.7);
   border: 1px solid rgba(160, 175, 255, 0.28); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
+.resume-game-link { color: #eef2ff; text-decoration: none; }
+.resume-game-link:hover { background: rgba(10, 16, 36, 0.9); }
 .mini { width: 96px; height: 62px; border-radius: 12px; border: 1px solid rgba(160, 175, 255, 0.28); display: block; }
 .joy { position: absolute; left: 18px; bottom: 26px; width: 132px; height: 132px; border-radius: 50%; touch-action: none; background: rgba(238, 242, 255, 0.07); border: 1px solid rgba(238, 242, 255, 0.28); backdrop-filter: blur(6px); }
 .knob { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle at 35% 30%, #fff3b0, #ffb020); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
@@ -298,6 +304,10 @@ h1 { font-size: clamp(2.3rem, 6.6vw, 4.1rem); font-weight: 800; letter-spacing: 
 }
 .drawer h2 { font-size: 0.95rem; padding: 14px 16px 8px; letter-spacing: -0.01em; }
 .drawer ul { list-style: none; margin: 0; padding: 0 8px 4px; }
+.drawer-resume { padding: 12px 8px; border-top: 1px solid var(--line); }
+.drawer-resume .resume-card { padding: 14px; border: 0; border-radius: 14px; box-shadow: none; background: var(--card-2); flex-direction: column; align-items: flex-start; gap: 12px; }
+.drawer-resume .resume-card p { font-size: 0.85rem; }
+.drawer-resume .resume-card .btn { min-height: 40px; padding: 8px 14px; font-size: 0.88rem; }
 .drawer li button { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 46px; padding: 8px 10px; border: 0; border-radius: 12px; background: transparent; color: var(--text); font-weight: 600; font-size: 0.95rem; text-align: left; cursor: pointer; }
 .drawer li button:hover { background: var(--brand-soft); }
 .drawer li svg { color: var(--mint); }
